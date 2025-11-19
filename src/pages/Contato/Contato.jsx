@@ -1,79 +1,123 @@
+import React from "react";
 import { Mail, Phone, Instagram, Facebook, Twitter, LifeBuoy } from "lucide-react";
+import { useInView } from "react-intersection-observer";
+
+
+import LOGO from "../../assets/logo-1.png";
 
 const Contato = () => {
-  return (
-    <div className="min-h-screen bg-stone-900 border-lime-600 border-2 text-white px-4 py-20 mb-15">
-      <main className="max-w-6xl mx-auto text-center">
-        <h1 className="text-4xl font-bold text-lime-500">Contato</h1>
-        <div className="w-32 h-1 bg-lime-600 mx-auto mt-2 rounded-full" />
-      </main>
+  const { ref: refTopo, inView: topoVisivel } = useInView({ triggerOnce: true, threshold: 0.2 });
+  const { ref: refConteudo, inView: conteudoVisivel } = useInView({ triggerOnce: true, threshold: 0.2 });
 
-      <section className="max-w-4xl mx-auto mt-16 space-y-12 text-gray-200 text-base leading-relaxed animate-fadeIn">
-        <p>
-          Se você tiver dúvidas, comentários ou preocupações, não hesite em entrar em contato com a equipe da <strong>GlitchScreen</strong>. Estamos sempre prontos para ajudar e ouvir você.
+  return (
+    <div className="min-h-screen gs-gradient-dark text-white mb-30 px-6 pt-28 pb-32">
+
+      {/* TOPO COM LOGO */}
+      <div
+        ref={refTopo}
+        className={`
+          flex flex-col items-center justify-center text-center
+          transition-all duration-700
+          ${topoVisivel ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}
+        `}
+      >
+        <img
+          src={LOGO}
+          alt="Guardsense"
+          className="w-28 h-auto drop-shadow-[0_0_25px_rgba(0,0,0,0.5)] mb-4"
+        />
+
+        <h1 className="text-4xl md:text-5xl font-extrabold text-guardsense-blue-light tracking-wide">
+          Contato
+        </h1>
+        <div className="w-40 h-1 bg-guardsense-blue-light mt-3 rounded-full shadow-lg" />
+      </div>
+
+      {/* CONTEÚDO */}
+      <section
+        ref={refConteudo}
+        className={`
+          max-w-4xl mx-auto mt-20 space-y-14 text-gray-200 text-base leading-relaxed
+          transition-all duration-700
+          ${conteudoVisivel ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}
+        `}
+      >
+        <p className="text-gray-300">
+          Se você tiver dúvidas, sugestões ou precisar de suporte, entre em contato com a equipe
+          da <strong>Guardsense</strong>. Estamos aqui para ajudar você a aproveitar toda a
+          experiência da plataforma com segurança e praticidade.
         </p>
 
-        {/* Bloco de informações principais */}
-        <div className="grid md:grid-cols-2 gap-6">
-          <div className="bg-stone-800 rounded-xl p-6 shadow-md shadow-lime-900/20 hover:shadow-lime-700/30 transition">
-            <h3 className="text-lg font-semibold mb-4 text-lime-400 flex items-center gap-2">
-              <Mail className="w-5 h-5" /> E-mail
+        {/* BLOCO DE INFORMAÇÕES */}
+        <div className="grid md:grid-cols-2 gap-8">
+
+          {/* EMAIL */}
+          <div className="gs-card-light rounded-2xl p-6 backdrop-blur-xl hover:scale-[1.02] transition-all duration-300">
+            <h3 className="text-lg font-semibold text-guardsense-blue-light mb-3 flex items-center gap-2">
+              <Mail size={20} /> E-mail
             </h3>
-            <a href="mailto:suporte@glitchscreen.com" className="text-lime-300 hover:underline">
-              suporte@glitchscreen.com
+            <a href="mailto:suporte@guardsense.com" className="text-guardsense-blue-light hover:underline">
+              suporte@guardsense.com
             </a>
           </div>
 
-          <div className="bg-stone-800 rounded-xl p-6 shadow-md shadow-lime-900/20 hover:shadow-lime-700/30 transition">
-            <h3 className="text-lg font-semibold mb-4 text-lime-400 flex items-center gap-2">
-              <Phone className="w-5 h-5" /> Telefone
+          {/* TELEFONE */}
+          <div className="gs-card-light rounded-2xl p-6 backdrop-blur-xl hover:scale-[1.02] transition-all duration-300">
+            <h3 className="text-lg font-semibold text-guardsense-blue-light mb-3 flex items-center gap-2">
+              <Phone size={20} /> Telefone
             </h3>
             <p>(11) 98491-2520</p>
-            <p className="text-sm text-gray-400 mt-1">
+            <p className="text-gray-400 text-sm mt-1">
               Atendimento de segunda a sexta, das 9h às 18h.
             </p>
           </div>
 
-          <div className="bg-stone-800 rounded-xl p-6 shadow-md shadow-lime-900/20 hover:shadow-lime-700/30 transition col-span-full">
-            <h3 className="text-lg font-semibold mb-4 text-lime-400 flex items-center gap-2">
-              <LifeBuoy className="w-5 h-5" /> Central de Ajuda
+          {/* CENTRAL DE AJUDA */}
+          <div className="gs-card-light rounded-2xl p-6 backdrop-blur-xl hover:scale-[1.02] transition-all duration-300 md:col-span-2">
+            <h3 className="text-lg font-semibold text-guardsense-blue-light mb-3 flex items-center gap-2">
+              <LifeBuoy size={20} /> Central de Ajuda
             </h3>
             <a
-              href="https://www.glitchscreen.com/help"
+              href="https://www.guardsense.com/help"
               target="_blank"
-              className="text-lime-300 hover:underline"
+              className="text-guardsense-blue-light hover:underline"
             >
-              www.glitchscreen.com/help
+              www.guardsense.com/help
             </a>
           </div>
         </div>
 
-        {/* Redes Sociais */}
-        <div className="mt-12 text-center">
-          <h2 className="text-xl font-semibold text-lime-400 mb-4">Redes Sociais</h2>
-          <p className="mb-6">
-            Siga a GlitchScreen e fique por dentro de novidades, lançamentos e promoções.
+        {/* REDES SOCIAIS */}
+        <div className="text-center mt-10">
+          <h2 className="text-xl font-semibold text-guardsense-blue-light mb-4">Redes Sociais</h2>
+          <p className="mb-6 text-gray-300">
+            Siga a Guardsense para novidades, atualizações e conteúdos exclusivos.
           </p>
-          <div className="flex justify-center gap-8 text-lime-300 text-sm">
-            <a href="https://facebook.com/GlitchScreen" target="_blank" className="group hover:text-lime-500 transition">
+
+          <div className="flex justify-center gap-10 text-guardsense-blue-light">
+            <a className="group hover:text-white transition" href="#">
               <Facebook className="mx-auto mb-1 group-hover:scale-110 transition" />
               Facebook
             </a>
-            <a href="https://twitter.com/GlitchScreen" target="_blank" className="group hover:text-lime-500 transition">
+
+            <a className="group hover:text-white transition" href="#">
               <Twitter className="mx-auto mb-1 group-hover:scale-110 transition" />
               Twitter
             </a>
-            <a href="https://instagram.com/glitchscreen" target="_blank" className="group hover:text-lime-500 transition">
+
+            <a className="group hover:text-white transition" href="#">
               <Instagram className="mx-auto mb-1 group-hover:scale-110 transition" />
               Instagram
             </a>
           </div>
         </div>
 
-        <p>
-          Seu feedback é fundamental para continuarmos evoluindo e oferecendo a melhor experiência de jogo possível. Estamos aqui para garantir que você aproveite ao máximo a plataforma.
+        <p className="text-gray-400 text-center mt-10">
+          A sua opinião é essencial para que possamos continuar aprimorando nossos serviços e
+          desenvolvendo soluções mais inteligentes para você.
         </p>
       </section>
+
     </div>
   );
 };

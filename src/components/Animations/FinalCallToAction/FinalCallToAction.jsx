@@ -8,12 +8,12 @@ function FinalCallToAction() {
   });
 
   return (
-    <section className="w-full min-h-screen bg-guardsense-blue-dark flex items-center px-6 py-24 relative overflow-hidden">
+    <section className="w-full h-110 bg-guardsense-blue-dark flex items-center px-6 relative overflow-hidden">
       <div
         ref={ref}
         className={`
-          max-w-3xl mx-auto text-center text-white transition-all duration-700 w-full
-          ${inView ? "opacity-100 scale-100 translate-y-0" : "opacity-0 scale-95 translate-y-6"}
+          max-w-4xl mx-auto text-center text-white transition-all duration-700 w-full
+          ${inView ? "opacity-100 scale-100 translate-y-0" : "opacity-0 scale-75 translate-y-6"}
         `}
       >
         <h2 className="text-4xl font-bold mb-6">Entre em contato</h2>

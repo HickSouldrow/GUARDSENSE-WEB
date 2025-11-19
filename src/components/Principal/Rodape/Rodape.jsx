@@ -59,8 +59,8 @@ const Rodape = () => {
               Sobre Nós
             </Link>
 
-            <Link to="/Recursos" className="text-gray-300 hover:text-guardsense-button transition transform hover:scale-105">
-              Recursos
+            <Link to="/contato" className="text-gray-300 hover:text-guardsense-button transition transform hover:scale-105">
+              Contato
             </Link>
 
             <Link to="/Termos" className="text-gray-300 hover:text-guardsense-button transition transform hover:scale-105">
