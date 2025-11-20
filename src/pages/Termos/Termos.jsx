@@ -10,10 +10,44 @@ const Termos = () => {
   return (
     <div className="relative min-h-screen text-white gs-gradient-dark px-6 pb-32 lg:px-12 overflow-hidden">
 
-      {/* ILUMINAÇÃO DE FUNDO */}
-      <div className="pointer-events-none absolute inset-0 z-0">
-        <div className="absolute -top-20 left-1/3 w-[480px] h-[480px] bg-guardsense-blue-light/25 blur-[120px] rounded-full opacity-30"></div>
-        <div className="absolute bottom-0 right-0 w-[380px] h-[380px] bg-guardsense-blue-dark/30 blur-[100px] rounded-full opacity-40"></div>
+      {/* --- ILUMINAÇÃO DE FUNDO DINÂMICA --- */}
+      <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
+
+        {/* BOLA FLUTUANTE ESQUERDA */}
+        <div
+          className="absolute -top-32 left-1/4 w-[550px] h-[550px]
+                     bg-guardsense-blue-light/20 blur-[130px] rounded-full opacity-40
+                     animate-[float_8s_ease-in-out_infinite]"
+        />
+
+        {/* BOLA FLUTUANTE DIREITA */}
+        <div
+          className="absolute bottom-[-120px] right-[-80px] w-[480px] h-[480px]
+                     bg-guardsense-blue-dark/30 blur-[120px] rounded-full opacity-40
+                     animate-[float_10s_ease-in-out_infinite_reverse]"
+        />
+
+        {/* REFLEXO CENTRAL */}
+        <div
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+                     w-[600px] h-[600px] bg-guardsense-blue-light/10 blur-[200px]
+                     rounded-full opacity-20 animate-pulse"
+        />
+
+        {/* PARTÍCULAS */}
+        {[...Array(18)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute w-1.5 h-1.5 bg-guardsense-blue-light/40 rounded-full blur-[2px]
+                       animate-[rise_7s_linear_infinite]"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 5}s`,
+              opacity: 0.4,
+            }}
+          ></div>
+        ))}
       </div>
 
       <main className="relative z-10 max-w-5xl mx-auto py-20 mt-20">
@@ -37,11 +71,11 @@ const Termos = () => {
             transition-all duration-700 delay-300
             ${inView ? "opacity-100 scale-100" : "opacity-0 scale-75"}
           `}
-        ></div>
+        />
 
         <div ref={ref} className="mt-16 space-y-16">
 
-          {/* Seção 1 */}
+         {/* Seção 1 */}
           <section className="gs-card fade-up animation-delay-200 enhanced-section">
             <h2 className="section-title">1. Aceitação dos Termos</h2>
             <p className="section-text">
@@ -128,9 +162,9 @@ const Termos = () => {
             </ul>
           </section>
 
-          {/* Rodapé */}
+
           <footer className="text-center text-sm text-gray-400 mt-20 fade-up animation-delay-1000">
-            Última atualização: 18 de Novembro de 2025
+
           </footer>
 
         </div>
