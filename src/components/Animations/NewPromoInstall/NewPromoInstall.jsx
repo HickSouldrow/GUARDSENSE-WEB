@@ -14,7 +14,7 @@ function NewPromoInstall() {
   });
 
   return (
-    <section className="relative w-full bg-guardsense-blue-light py-16 px-6 text-gray-900 overflow-hidden">
+    <section className="relative w-full bg-guardsense-blue-light py-16 px-6 text-guardsense-button overflow-hidden">
       
       <div className="relative z-10 max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-8">
 
@@ -49,7 +49,7 @@ function NewPromoInstall() {
           <img
             src={Screenshot1}
             alt="App Screenshot"
-            className="w-48 sm:w-56 md:w-64 lg:w-72 rounded-2xl shadow-xl border border-guardsense-blue-dark"
+            className="w-48 md:w-64 lg:w-72 rounded-2xl border border-guardsense-blue-dark"
           />
         </div>
 

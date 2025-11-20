@@ -139,3 +139,34 @@
     transform: translateX(0);
   }
 }
+
+.bg-luzes-diagonal {
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-luzes-diagonal::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    rgba(100, 0, 255, 0.2),
+    rgba(0, 225, 255, 0.15),
+    rgba(100, 0, 255, 0.2)
+  );
+  filter: blur(100px);
+  animation: moverDiagonais 12s ease-in-out infinite;
+}
+
+@keyframes moverDiagonais {
+  0% {
+    transform: translate(-20%, -10%);
+  }
+  50% {
+    transform: translate(20%, 10%);
+  }
+  100% {
+    transform: translate(-20%, -10%);
+  }
+}

@@ -5,7 +5,20 @@ export function ScrollToTop() {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+
+    window.scrollTo(0, 0);
+
+
+    requestAnimationFrame(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    });
+
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 150);
   }, [pathname]);
 
   return null;
