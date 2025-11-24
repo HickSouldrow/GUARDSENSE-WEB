@@ -85,7 +85,7 @@ const SobreNos = () => {
   const { ref: refEquipe, visivel: visivelEquipe } = useFadeOnView();
 
   return (
-    <div className="min-h-screen text-white px-4 py-16 sm:py-20 gs-gradient-dark bg-luzes-diagonal">
+    <div className="min-h-screen text-white px-4 pb-40 py-16 sm:py-20 gs-gradient-dark bg-luzes-diagonal">
 
       <main className="max-w-6xl mx-auto text-center">
 
