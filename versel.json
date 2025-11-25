@@ -1,5 +1,17 @@
 {
   "rewrites": [
+    { "source": "/", "destination": "/" },
+    
+    { "source": "/SobreNos", "destination": "/" },
+    { "source": "/Contato", "destination": "/" },
+    { "source": "/404", "destination": "/" },
+
+    { "source": "/dashboard", "destination": "/" },
+    { "source": "/termos", "destination": "/" },
+    
+    { "source": "/home", "destination": "/" },
+    { "source": "/inicio", "destination": "/" },
+
     { "source": "/(.*)", "destination": "/" }
   ]
 }
