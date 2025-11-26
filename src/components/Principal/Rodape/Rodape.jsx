@@ -1,7 +1,7 @@
 // src/components/Rodape/Rodape.jsx
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import LOGO_WHITE from '../../../assets/Guardsense.png';
+import LOGO_WHITE from '../../../assets/Guardsense.svg';
 
 const Rodape = () => {
   const [isAtBottom, setIsAtBottom] = useState(false);
@@ -83,15 +83,13 @@ const Rodape = () => {
 
           {/* LINKS */}
 <div
-  className="
-    flex flex-wrap 
+  className="flex flex-wrap 
     items-center justify-center 
     gap-2 sm:gap-4 md:gap-6 
     text-[11px] sm:text-sm 
 
     mt-6 
-    mb-2 sm:mb-2 md:mb-0
-  "
+    mb-2 sm:mb-2 md:mb-0"
 >
   <Link to="/SobreNos" className="text-gray-300 hover:text-guardsense-button transition transform hover:scale-105">
     Sobre Nós

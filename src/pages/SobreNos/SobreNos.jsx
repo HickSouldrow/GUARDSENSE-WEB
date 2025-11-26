@@ -86,7 +86,7 @@ const SobreNos = () => {
             bg-white text-black py-12 px-6 
             rounded-3xl shadow-[0_0_30px_rgba(0,0,0,0.25)]
             border border-gray-100 backdrop-blur
-            transition-all duration-700 max-w-3xl mx-auto
+            transition-all duration-700 max-w-3xl mx-auto ms:my-20
             ${visivelBarra ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}
           `}
         >

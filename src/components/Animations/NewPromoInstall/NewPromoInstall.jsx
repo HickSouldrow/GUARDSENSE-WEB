@@ -1,6 +1,6 @@
 import React from "react";
 import { useInView } from "react-intersection-observer";
-import PlayStore from "../../../assets/play-store.png";
+import PlayStore from "../../../assets/play-store.svg";
 import Screenshot1 from "../../../assets/screenshot1.png";
 
 function NewPromoInstall() {
@@ -42,7 +42,7 @@ function NewPromoInstall() {
         {/* IMAGEM */}
         <div
           ref={imgRef}
-          className={`flex-1 flex justify-center transition-all duration-700 ${
+          className={`flex-1 h-40 w-40 flex justify-center transition-all duration-700 ${
             imgInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >

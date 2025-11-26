@@ -1,7 +1,7 @@
 import React from "react";
 import { Mail, Phone, Instagram, Facebook, Twitter, LifeBuoy } from "lucide-react";
 import { useInView } from "react-intersection-observer";
-import LOGO from "../../assets/logo-1.png";
+import LOGO from "../../assets/logo-1.svg";
 
 const Contato = () => {
   const { ref: refTopo, inView: topoVisivel } = useInView({ triggerOnce: true, threshold: 0.2 });
