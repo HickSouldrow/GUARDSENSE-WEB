@@ -10,7 +10,7 @@ const Rodape = () => {
     const handleScroll = () => {
       const isBottom =
         window.innerHeight + window.scrollY >=
-        document.documentElement.scrollHeight - 50;
+        document.documentElement.scrollHeight - 20;
 
       setIsAtBottom(isBottom);
     };
@@ -20,22 +20,11 @@ const Rodape = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // espaço extra pra evitar sobrepor o conteúdo
-  useEffect(() => {
-    const body = document.body;
-    if (!isAtBottom) {
-      body.style.paddingBottom = "150px";
-    } else {
-      body.style.paddingBottom = "0px";
-    }
-
-    return () => {
-      body.style.paddingBottom = "0px";
-    };
-  }, [isAtBottom]);
-
   return (
     <>
+      {/* Spacer que evita sobreposição*/}
+      {!isAtBottom && <div style={{ height: "120px" }} />}
+
       <footer
         className={`
           fixed bottom-0 left-0 right-0 z-40 
@@ -49,7 +38,7 @@ const Rodape = () => {
             flex flex-col md:flex-row 
             items-center md:items-start 
             justify-between 
-            w-full px-4 sm:px-6 md:px-10 
+            w-full px-3 sm:px-4 md:px-6 
             py-6 sm:py-8 md:py-12
             gap-6 md:gap-0
             border-t-4 border-guardsense-button/70
@@ -82,30 +71,26 @@ const Rodape = () => {
           </div>
 
           {/* LINKS */}
-<div
-  className="flex flex-wrap 
-    items-center justify-center 
-    gap-2 sm:gap-4 md:gap-6 
-    text-[11px] sm:text-sm 
+          <div
+            className="flex flex-wrap items-center justify-center 
+            gap-2 sm:gap-4 md:gap-6 text-[11px] sm:text-sm 
+            mt-6 mb-2 md:mb-0"
+          >
+            <Link to="/SobreNos" className="text-gray-300 hover:text-guardsense-button transition transform hover:scale-105">
+              Sobre Nós
+            </Link>
 
-    mt-6 
-    mb-2 sm:mb-2 md:mb-0"
->
-  <Link to="/SobreNos" className="text-gray-300 hover:text-guardsense-button transition transform hover:scale-105">
-    Sobre Nós
-  </Link>
+            <Link to="/contato" className="text-gray-300 hover:text-guardsense-button transition transform hover:scale-105">
+              Contato
+            </Link>
 
-  <Link to="/contato" className="text-gray-300 hover:text-guardsense-button transition transform hover:scale-105">
-    Contato
-  </Link>
-
-  <Link to="/Termos" className="text-gray-300 hover:text-guardsense-button transition transform hover:scale-105">
-    Termos de Uso
-  </Link>
-</div>
+            <Link to="/Termos" className="text-gray-300 hover:text-guardsense-button transition transform hover:scale-105">
+              Termos de Uso
+            </Link>
+          </div>
 
           {/* COPYRIGHT */}
-          <div className="text-gray-500 text-[9px] sm:text-[11px] mt-6 mb-2 sm:mb-2 md:mb-0 md:text-xs text-center md:text-right">
+          <div className="text-gray-500 text-[9px] sm:text-[11px] md:text-xs text-center md:text-right">
             © {new Date().getFullYear()} Guardsense. Todos os direitos reservados.
           </div>
 

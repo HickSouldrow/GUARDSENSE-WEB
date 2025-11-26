@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import { useInView } from "react-intersection-observer";
 
 function FinalCallToAction() {
@@ -22,7 +23,7 @@ function FinalCallToAction() {
           (11) 98491-2520
         </p>
 
-        <button
+         <Link to="/contato"
           className="
             bg-guardsense-button text-black font-semibold
             py-4 px-10 rounded-xl text-xl
@@ -30,7 +31,7 @@ function FinalCallToAction() {
           "
         >
           Fale Conosco
-        </button>
+        </Link>
       </div>
 
       {/* Detalhe visual de fundo */}

@@ -3,7 +3,7 @@ import {HeroSection, FeaturesSection, FeaturesGrid, AppImageLeft, AppImageRight,
 
 const Inicial = () => {
   return (
-    <div className="min-h-screen flex flex-col relative overflow-hidden mb-40">
+    <div className="min-h-screen flex flex-col relative overflow-hidden ">
       
       <HeroSection />
 

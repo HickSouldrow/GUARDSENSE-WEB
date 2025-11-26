@@ -8,7 +8,7 @@ const Termos = () => {
   });
 
   return (
-    <div className="relative min-h-screen text-white gs-gradient-dark px-6 pb-32 lg:px-12 overflow-hidden">
+    <div className="relative min-h-screen text-white gs-gradient-dark px-6 lg:px-12 overflow-hidden">
 
       {/* --- ILUMINAÇÃO DE FUNDO DINÂMICA --- */}
       <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">

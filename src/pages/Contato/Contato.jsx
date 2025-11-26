@@ -8,7 +8,7 @@ const Contato = () => {
   const { ref: refConteudo, inView: conteudoVisivel } = useInView({ triggerOnce: true, threshold: 0.2 });
 
   return (
-    <div className="min-h-screen gs-gradient-dark text-white px-5 sm:px-6 md:px-10 pt-24 pb-75 relative overflow-hidden">
+    <div className="min-h-screen gs-gradient-dark text-white px-5 sm:px-6 md:px-10 pt-24 pb-35 relative overflow-hidden">
 
       {/* EFEITOS DE LUZ */}
       <div className="absolute -top-20 -right-20 w-72 h-72 bg-guardsense-blue-light/25 blur-[85px] rounded-full opacity-40"></div>
@@ -117,7 +117,7 @@ const Contato = () => {
   );
 };
 
-// COMPONENTE CARD (mais bonito, responsivo e consistente com SobreNos)
+// COMPONENTE CARD
 const CardContato = ({ icon, titulo, conteudo, large = false }) => {
   return (
     <div
