@@ -37,34 +37,24 @@ const MembroCard = ({ nome, github, index }) => {
     <div
       ref={ref}
       className={`
-        transition-all duration-700 transform
-        ${visivel ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}
-      `}
-      style={{ transitionDelay: `${index * 150}ms` }}
+        transition-all duration-700 transform ${visivel ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}
+      `}style={{ transitionDelay: `${index * 150}ms` }}
     >
       <a
         href={github}
         target="_blank"
         rel="noopener noreferrer"
         className="
-          group flex flex-col items-center text-center
-          bg-gradient-to-br from-[#101828e6] via-[#0c1222dd] to-[#00040acc]
-          backdrop-blur-xl border border-white/10 rounded-3xl p-8
-          shadow-[0_0_25px_rgba(0,0,0,0.45)]
-          hover:shadow-[0_0_45px_rgba(0,0,0,0.6)]
-          transition-all duration-500 hover:scale-105
-          w-[220px] h-[300px] sm:w-[250px] md:w-[280px]
-        "
+          group flex flex-col items-center text-center bg-gradient-to-br from-[#101828e6] via-[#0c1222dd] 
+          to-[#00040acc] backdrop-blur-xl border border-white/10 rounded-3xl p-8 shadow-[0_0_25px_rgba(0,0,0,0.45)]
+          hover:shadow-[0_0_45px_rgba(0,0,0,0.6)] transition-all duration-500 hover:scale-105 w-[220px] h-[300px] sm:w-[250px] md:w-[280px]"
       >
         {/* FOTO */}
         <img
           src={`https://github.com/${githubUser}.png`}
           alt={nome}
           className="
-            w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full 
-            border-[3px] border-guardsense-button
-            shadow-xl group-hover:scale-110 transition duration-300
-          "
+          w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full border-[3px] border-guardsense-button shadow-xl group-hover:scale-110 transition duration-300"
         />
 
         {/* NOME */}
@@ -85,9 +75,9 @@ const SobreNos = () => {
   const { ref: refEquipe, visivel: visivelEquipe } = useFadeOnView();
 
   return (
-    <div className="min-h-screen text-white px-4 pb-40 py-16 sm:py-20 gs-gradient-dark bg-luzes-diagonal">
+    <div className="min-h-screen text-white px-4 pb-55 py-16 sm:py-50 gs-gradient-dark bg-luzes-diagonal">
 
-      <main className="max-w-6xl mx-auto text-center">
+      <main className="max-w-5xl mx-auto text-center">
 
         {/* BLOCO BRANCO */}
         <div

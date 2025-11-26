@@ -8,7 +8,7 @@ export const AppContextProvider = (props) => {
   return (
     <AppContext.Provider 
       value={{
-        nomeUsuario: 'Henrique da Silva Maneiro',
+        nomeUsuario: 'Guardsense Viewer',
 
       }}
     >

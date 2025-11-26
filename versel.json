@@ -1,14 +1,11 @@
 {
   "rewrites": [
-    { "source": "/Contato", "destination": "/" },
-    { "source": "/Termos", "destination": "/" },
-    { "source": "/SobreNos", "destination": "/" },
 
-    { "source": "/contato", "destination": "/" },
-    { "source": "/termos", "destination": "/" },
-    { "source": "/sobrenos", "destination": "/" },
+    { "source": "/contato", "destination": "/contato" },
+    { "source": "/termos", "destination": "/termos" },
+    { "source": "/sobrenos", "destination": "/sobrenos" },
 
-    { "source": "/(.*)", "destination": "/" }
+    { "source": "/(.*)", "destination": "/erro404" }
   ]
 }
 
