@@ -1,7 +1,7 @@
 import React from "react";
 import { useInView } from "react-intersection-observer";
 import PlayStore from "../../../assets/play-store.svg";
-import Screenshot1 from "../../../assets/screenshot1.png";
+import Screenshot1 from "../../../assets/screenshot1.svg";
 
 function NewPromoInstall() {
   const { ref: textRef, inView: textInView } = useInView({
@@ -14,9 +14,9 @@ function NewPromoInstall() {
   });
 
   return (
-    <section className="relative w-full bg-guardsense-blue-light py-16 px-6 text-guardsense-button overflow-hidden">
-      
-      <div className="relative z-10 max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-8">
+    <section className="relative w-full bg-guardsense-blue-light py-20 px-6 text-guardsense-button overflow-hidden">
+
+      <div className="relative z-10 max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
 
         {/* TEXTOS */}
         <div
@@ -39,18 +39,22 @@ function NewPromoInstall() {
           </button>
         </div>
 
-        {/* IMAGEM */}
         <div
           ref={imgRef}
-          className={`flex-1 h-40 w-40 flex justify-center transition-all duration-700 ${
+          className={`flex-1 flex justify-center transition-all duration-700 ${
             imgInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          <img
-            src={Screenshot1}
-            alt="App Screenshot"
-            className="w-48 md:w-64 lg:w-72 rounded-2xl border border-guardsense-blue-dark"
-          />
+          <div className="relative h-[560px] w-[260px] bg-black rounded-[2.2rem] border-[5px] border-gray-600 shadow-[0_25px_70px_rgba(0,0,0,0.55)] overflow-hidden">
+            <div className="absolute right-[-7px] top-1/3 h-24 bg-gray-500 rounded-md"></div>
+            <div className="absolute inset-[6px] rounded-[2rem] overflow-hidden bg-black">
+              <img
+                src={Screenshot1}
+                alt="App Screenshot"
+                className="w-full h-full"
+              />
+            </div>
+          </div>
         </div>
 
       </div>

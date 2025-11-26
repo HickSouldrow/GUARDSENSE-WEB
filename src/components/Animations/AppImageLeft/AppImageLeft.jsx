@@ -1,7 +1,7 @@
 import React from 'react';
 import { CheckCircle } from 'lucide-react';
 import { useInView } from 'react-intersection-observer';
-import GuardsenseSrc from '../../../assets/registro0.png';
+import GuardsenseSrc from '../../../assets/registro0.svg';
 
 const Badge = ({ icon: Icon, text, delay }) => (
   <div
