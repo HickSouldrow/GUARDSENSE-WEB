@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from 'react-router-dom';
+import Guardsense from '../../assets/logo-2.svg';
 
 
 // Lista dos membros (mantive a sua)
@@ -138,18 +139,20 @@ const SobreNos = () => {
             </div>
 
             <div className="flex-1 flex justify-center md:justify-end">
-              <div className="relative w-[170px] h-[340px] rounded-2xlborder border-white/6 shadow-xl">
-                <div className="absolute inset-2 rounded-xl overflow-hidden bg-black flex items-center justify-center p-2">
-                  <img
-                    src="/assets/registro0.svg"
-                    alt="preview app"
-                    className="w-full h-full object-contain"
-                  />
+              <div className="relative justify-center rounded-2xl absolute inset-2 overflow-hidden flex items-center">
+          
+                <img
+            src={Guardsense}
+            alt="Guardsense App"
+            className="w-full max-w-[250px] md:max-w-[200px] sm:max-w-[50px] rounded-2xl border-guardsense-button ml-auto"
+            onError={(e) => {
+             
+            }}
+          />
                 </div>
-                <div className="absolute right-[-6px] top-1/3 h-14 w-[4px] bg-white/8 rounded-sm" />
+                <div className="absolute right-[-2px] top-1/3 h-14 w-[4px] bg-white/8 rounded-sm" />
               </div>
             </div>
-          </div>
         </section>
 
         {/* SEPARATOR */}
