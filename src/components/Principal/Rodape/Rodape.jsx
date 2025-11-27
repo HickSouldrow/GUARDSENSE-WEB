@@ -91,7 +91,7 @@ const Rodape = () => {
 
           {/* COPYRIGHT */}
           <div className="text-gray-500 text-[9px] sm:text-[11px] md:text-xs text-center md:text-right">
-            © {new Date().getFullYear()} Guardsense. Todos os direitos reservados.
+            © {new Date().getFullYear()} GuardSense. Todos os direitos reservados.
           </div>
 
         </div>

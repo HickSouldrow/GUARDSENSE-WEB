@@ -48,7 +48,7 @@ const Contato = () => {
       >
         <p className="text-gray-300 text-center text-base sm:text-lg max-w-3xl mx-auto leading-relaxed tracking-wide">
           Se você tiver dúvidas, sugestões ou precisar de suporte, entre em contato com a equipe
-          da <strong className="text-guardsense-blue-light">Guardsense</strong>. Estamos aqui para ajudar.
+          da <strong className="text-guardsense-blue-light">GuardSense</strong>. Estamos aqui para ajudar.
         </p>
 
         {/* CARDS */}

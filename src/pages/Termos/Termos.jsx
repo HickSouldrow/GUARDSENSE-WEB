@@ -79,7 +79,7 @@ const Termos = () => {
           <section className="gs-card fade-up animation-delay-200 enhanced-section">
             <h2 className="section-title">1. Aceitação dos Termos</h2>
             <p className="section-text">
-              Ao utilizar os serviços da Guardsense, você concorda integralmente com estes
+              Ao utilizar os serviços da GuardSense, você concorda integralmente com estes
               Termos de Serviço. Eles estabelecem as regras, limitações, direitos e responsabilidades
               que garantem o funcionamento seguro, ético e organizado da plataforma.
               Caso não concorde com qualquer parte, recomendamos que interrompa o uso imediatamente.
@@ -134,7 +134,7 @@ const Termos = () => {
           <section className="gs-card fade-up animation-delay-700 enhanced-section">
             <h2 className="section-title">6. Limitação de Responsabilidade</h2>
             <p className="section-text">
-              Embora trabalhemos para fornecer um ambiente seguro e estável, a Guardsense não se
+              Embora trabalhemos para fornecer um ambiente seguro e estável, a GuardSense não se
               responsabiliza por danos indiretos, lucros cessantes, perda de dados ou problemas
               decorrentes de fatores externos, como falhas na conexão ou interrupções
               inesperadas na rede.

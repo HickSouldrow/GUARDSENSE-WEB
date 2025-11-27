@@ -113,7 +113,7 @@ const SobreNos = () => {
           <div className="flex flex-col md:flex-row items-center gap-8">
             <div className="flex-1 text-center md:text-left">
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-guardsense-button leading-tight">
-                Sobre a <span className="text-white">Guardsense</span>
+                Sobre a <span className="text-white">GuardSense</span>
               </h1>
 
               <p className="mt-4 text-gray-300 max-w-3xl text-base sm:text-lg leading-relaxed">

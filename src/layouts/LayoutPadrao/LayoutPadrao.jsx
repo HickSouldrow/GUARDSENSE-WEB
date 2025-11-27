@@ -11,7 +11,8 @@ const LayoutPadrao = () => {
           <Outlet />
         </Conteudo>
       </main>
-      <div id="footer-reserved-space" style={{ height: "120px" }}>      <Rodape/></div>
+      <div id="footer-reserved-space" style={{ height: "120px" }}>     
+         <Rodape/></div>
 
     </div>
   );
