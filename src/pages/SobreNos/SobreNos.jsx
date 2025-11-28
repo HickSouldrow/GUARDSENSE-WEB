@@ -33,7 +33,7 @@ const useFadeOnView = (threshold = 0.2) => {
   return { ref, visivel };
 };
 
-// CARD DE MEMBRO (reaproveitei sua estrutura e melhorei acessibilidade / foco)
+// CARD DE MEMBRO)
 const MembroCard = ({ nome, github, index }) => {
   const githubUser = github.replace("https://github.com/", "");
   const { ref, visivel } = useFadeOnView(0.15);
@@ -144,7 +144,7 @@ const SobreNos = () => {
                 <img
             src={Guardsense}
             alt="Guardsense App"
-            className="w-full max-w-[250px] md:max-w-[200px] sm:max-w-[50px] rounded-2xl border-guardsense-button ml-auto"
+            className="w-full max-w-[250px] md:max-w-[200px] sm:max-w-[50px] rounded-2xl ml-auto"
             onError={(e) => {
              
             }}

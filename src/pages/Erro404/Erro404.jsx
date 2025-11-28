@@ -15,7 +15,7 @@ const Erro404 = () => {
       min-h-screen 
       flex items-center justify-center 
       bg-gradient-guardsense from-guardsense-blue-light to-guardsense-darker-blue 
-      p-6 pb-30
+      p-6 py-30
     ">
       <div
         ref={ref}
